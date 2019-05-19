@@ -231,6 +231,33 @@ namespace DataStructure
             }
             return palindrome;
         }
+
+        /// <summary>
+        /// Print N-th node from last
+        /// </summary>
+        /// <param name="positionFromLast">N-th node from last</param>
+        public void PrintFromLast(int positionFromLast)
+        {
+            int count = Count();
+            if(positionFromLast > count)
+            {
+                WriteLine("Invalid postion");
+                return;
+            }
+            int positionFromFirst = count - positionFromLast + 1;
+            var temp = First;
+            int counter = 0;
+            while(temp != null)
+            {
+                counter++;
+                if(counter == positionFromFirst)
+                {
+                    WriteLine($"{positionFromLast}-th element from last is : {temp.Data}");
+                    return;
+                }
+                temp = temp.Next;
+            }
+        }
         public void Print()
         {
             if(First ==null)

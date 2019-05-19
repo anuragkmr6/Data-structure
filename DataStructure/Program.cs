@@ -51,9 +51,10 @@ namespace DataStructure
             list.Print();
 
             WriteLine($"Linked list count: {list.Count()}");
-            */
 
             WriteLine($"Linked list is palindrome: {list.IsPalindrome()}");
+            */
+            list.PrintFromLast(5);
             ReadLine();
 
         }
